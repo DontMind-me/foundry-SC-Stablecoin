@@ -1,66 +1,45 @@
-## Foundry
+# SC-Stablecoin
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+## About
 
-Foundry consists of:
+This project is a stablecoin where users can deposit WETH and WBTC in exchange for a token pegged to the US dollar. The protocol is all programatic.
 
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+1. **Relative stability**: Anchored / Pegged to the US Dollar. 
+2. **Stability Mechanism**: Algorithmic (Users can only mint stablecoin with enough collateral)
+3. **Collateral**: Exogenous (Collateral comes from outside the protocol meaning that if our stablecoin fails, the collateral doesn't fail)
 
-## Documentation
+## License
 
-https://book.getfoundry.sh/
+MIT
 
-## Usage
+## Clone Repository 
 
-### Build
-
-```shell
-$ forge build
+```
+git clone https://github.com/DontMind-me/foundry-SC-Stablecoin
+cd foundry-SC-Stablecoin
+forge build
 ```
 
-### Test
+## Installs
 
-```shell
-$ forge test
+To interact with the contract, you will have to download the following packages 
+
+```
+forge install cyfrin/foundry-devops@0.2.2 --no-commit
 ```
 
-### Format
-
-```shell
-$ forge fmt
+```
+forge install smartcontractkit/chainlink-brownie-contracts@1.1.1 --no-commit
 ```
 
-### Gas Snapshots
-
-```shell
-$ forge snapshot
+```
+forge install foundry-rs/forge-std@v1.8.2 --no-commit
 ```
 
-### Anvil
-
-```shell
-$ anvil
+```
+ forge install transmissions11/solmate@v6 --no-commit
 ```
 
-### Deploy
+--------------------------------------------------------------------------------------
 
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
-
-### Cast
-
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
-```
+## THANK YOU FOR VISITING MY PROJECT
